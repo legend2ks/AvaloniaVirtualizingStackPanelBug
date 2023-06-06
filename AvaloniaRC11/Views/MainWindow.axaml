@@ -27,5 +27,4 @@
             <TextBlock Text="{Binding Selection.SelectedItem}" FontSize="20"/>
         </StackPanel>
     </Grid>
-
 </Window>

@@ -1,5 +1,0 @@
-﻿<linker>
-  <!-- Can be removed if CompiledBinding and no reflection are used -->
-  <assembly fullname="AvaloniaRC11" preserve="All" />
-  <assembly fullname="System.Text.Json" preserve="All" />
-</linker>
