@@ -36,17 +36,17 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         if (Selection.Count == 0) return;
         if (Selection.SelectedIndexes[^1] == Items.Count - 1) return;
-        var selectedDownloadsIndexes = Selection.SelectedIndexes.ToList();
+        var selectedIndexes = Selection.SelectedIndexes.ToList();
         string? temp = null;
 
-        for (var i = selectedDownloadsIndexes.Count - 1; i >= 0; i--)
+        for (var i = selectedIndexes.Count - 1; i >= 0; i--)
         {
-            temp ??= Items[selectedDownloadsIndexes[i] + 1];
-            Items[selectedDownloadsIndexes[i] + 1] = Items[selectedDownloadsIndexes[i]];
-            Selection.Select(selectedDownloadsIndexes[i] + 1);
+            temp ??= Items[selectedIndexes[i] + 1];
+            Items[selectedIndexes[i] + 1] = Items[selectedIndexes[i]];
+            Selection.Select(selectedIndexes[i] + 1);
 
-            if (i != 0 && selectedDownloadsIndexes[i] - selectedDownloadsIndexes[i - 1] <= 1) continue;
-            Items[selectedDownloadsIndexes[i]] = temp;
+            if (i != 0 && selectedIndexes[i] - selectedIndexes[i - 1] <= 1) continue;
+            Items[selectedIndexes[i]] = temp;
             temp = null;
         }
     }
