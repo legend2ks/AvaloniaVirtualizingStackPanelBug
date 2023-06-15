@@ -16,15 +16,20 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="*,Auto">
+    <Grid ColumnDefinitions="*,180">
+        <Grid.Styles>
+            <Style Selector="ListBoxItem:nth-child(2n)">
+                <Setter Property="Background" Value="Purple" />
+            </Style>
+        </Grid.Styles>
         <ListBox ItemsSource="{Binding Items}"
                  Selection="{Binding Selection}" />
 
         <StackPanel Grid.Column="1">
             <Button Content="Move Up" Command="{Binding MoveUpButtonPressedCommand}" />
-            <Button Content="Move Down" Command="{Binding MoveDownButtonPressedCommand}"/>
-            <TextBlock Text="Selected:" Margin="0 8 0 0"/>
-            <TextBlock Text="{Binding Selection.SelectedItem}" FontSize="20"/>
+            <Button Content="Move Down" Command="{Binding MoveDownButtonPressedCommand}" />
+            <TextBlock Text="Selected:" Margin="0 8 0 0" />
+            <TextBlock Text="{Binding Selection.SelectedItem}" FontSize="20" />
         </StackPanel>
     </Grid>
 </Window>
