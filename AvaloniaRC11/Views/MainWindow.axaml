@@ -8,7 +8,7 @@
         x:Class="AvaloniaRC11.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="AvaloniaRC11">
+        Title="11.0.999-cibuild0036565-beta">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,

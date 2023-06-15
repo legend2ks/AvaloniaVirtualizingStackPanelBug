@@ -14,13 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.0.0-rc1.1" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.0.0-rc1.1" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-rc1.1" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.0-rc1.1" />
+    <PackageReference Include="Avalonia" Version="11.0.999-cibuild0036565-beta"/>
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.999-cibuild0036565-beta"/>
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.999-cibuild0036565-beta"/>
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.999-cibuild0036565-beta"/>
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-rc1.1" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
-    <PackageReference Include="DynamicData" Version="7.14.2" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.999-cibuild0036565-beta"/>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0"/>
+    <PackageReference Include="DynamicData" Version="7.14.2"/>
   </ItemGroup>
 </Project>
