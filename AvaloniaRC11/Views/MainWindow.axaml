@@ -19,7 +19,7 @@
     <Grid ColumnDefinitions="*,180">
         <Grid.Styles>
             <Style Selector="ListBoxItem:nth-child(2n)">
-                <Setter Property="Background" Value="Purple" />
+                <Setter Property="Background" Value="Indigo" />
             </Style>
         </Grid.Styles>
         <ListBox ItemsSource="{Binding Items}"
