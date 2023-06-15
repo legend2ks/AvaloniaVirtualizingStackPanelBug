@@ -23,11 +23,16 @@ public partial class MainWindowViewModel : ViewModelBase
         {
             temp ??= Items[selectedIndexes[i] - 1];
             Items[selectedIndexes[i] - 1] = Items[selectedIndexes[i]];
-            Selection.Select(selectedIndexes[i] - 1);
+            // Selection.Select(selectedIndexes[i] - 1);
 
             if (i != selectedIndexes.Count - 1 && selectedIndexes[i + 1] - selectedIndexes[i] <= 1) continue;
             Items[selectedIndexes[i]] = temp;
             temp = null;
+        }
+
+        foreach (var i in selectedIndexes)
+        {
+            Selection.Select(i - 1);
         }
     }
 
@@ -43,11 +48,16 @@ public partial class MainWindowViewModel : ViewModelBase
         {
             temp ??= Items[selectedIndexes[i] + 1];
             Items[selectedIndexes[i] + 1] = Items[selectedIndexes[i]];
-            Selection.Select(selectedIndexes[i] + 1);
+            // Selection.Select(selectedIndexes[i] + 1);
 
             if (i != 0 && selectedIndexes[i] - selectedIndexes[i - 1] <= 1) continue;
             Items[selectedIndexes[i]] = temp;
             temp = null;
+        }
+
+        foreach (var i in selectedIndexes)
+        {
+            Selection.Select(i + 1);
         }
     }
 
